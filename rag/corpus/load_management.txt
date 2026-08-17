@@ -1,0 +1,13 @@
+Player Load Monitoring and Movement Data
+
+Sports science staffs use tracking-derived movement data, including total distance
+covered, number of high-speed accelerations and decelerations, and jump count, to
+estimate a player's physical load across a game or practice. Cumulative load over a
+rolling multi-game window is compared against a player's established baseline to flag
+periods of unusually high workload, which have been associated with elevated
+soft-tissue injury risk in sports science research. Because this data is tracking-derived
+rather than self-reported, it can be combined with wearable-based metrics like heart
+rate variability to build a more complete picture of a player's readiness on a given day.
+Teams typically treat any single day's load reading as noisy and instead look at trends
+over multiple games, since day-to-day variation in movement data is expected and does
+not by itself indicate elevated risk.

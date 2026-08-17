@@ -1,0 +1,14 @@
+Player Tracking and Spacing Metrics
+
+High-resolution player tracking data captures the x-y position of every player on the
+court, typically sampled 25 times per second, along with the ball. From this raw
+positional stream, analysts derive spacing metrics such as average distance between
+offensive players, the size of driving lanes, and how much floor area a shooter's gravity
+opens up for teammates. A common technique is to measure the convex hull area
+formed by the five offensive players at the moment a shot is taken; larger hull area
+generally correlates with better spacing and higher quality looks for teammates.
+Tracking data can also isolate a specific player's gravitational effect by comparing
+defender positioning when that player is on versus off the court, holding lineup
+otherwise constant. This kind of analysis requires clean, synchronized play-by-play and
+tracking data, since spacing metrics are only meaningful when tied to the exact moment
+of a specific offensive action.

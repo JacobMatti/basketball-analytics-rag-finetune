@@ -1,0 +1,14 @@
+Pick-and-Roll Defense Coverages
+
+Teams defend the pick-and-roll using a handful of common coverage schemes, each with
+different tracking-data signatures. In drop coverage, the screener's defender retreats
+toward the basket to protect the rim while the ball handler's defender fights over the
+screen, which tends to concede more mid-range shots but limits shots at the rim. In
+blitz or hard hedge coverage, both defenders converge on the ball handler immediately
+after the screen, which pressures the ball but temporarily leaves the screener's
+defender out of position, creating short-roll opportunities if the ball handler can pass
+out of the trap. Switching coverage simply exchanges defensive assignments at the
+point of the screen, avoiding a temporary numbers disadvantage but often creating a
+size or speed mismatch elsewhere on the floor. Coverage choice by team and by
+individual matchup is one of the most common questions strategic staffs bring to
+analytics groups before a playoff series.
