@@ -1,0 +1,13 @@
+Models: GPT-5.6 Sol
+
+1. How does StatMuse handle questions like these using sports data?
+
+2. Can you add better debugging so I can see the prompts, model responses, SQL queries, and retrieved rows.
+
+3. How can I improve my prompt so the model is better at writing SQL queries?
+
+4. Instead of having the LLM write the SQL itself, could the LLM understand the question and have Python write the SQL?
+
+5. Could the LLM turn the question into a simple JSON plan with the operations it needs, and then have Python convert that plan into SQL?
+
+6. Can you walk me through how we could implement the LLM to Python to SQL approach, including how it would handle filters, sums, counts, and grouping.

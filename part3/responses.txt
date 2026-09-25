@@ -1,0 +1,23 @@
+1. Pick one public question your pipeline answers correctly and one it gets wrong or abstains on. Quote the value or abstention reason your final answers.json holds for the failed one. Explain what retrieval or reasoning decision separates the two, and name the function or query you would change with another day.
+
+One question my pipeline answered correctly was Q2: “Which Outlaws starter scored the most total points in games the Outlaws lost by 10 or more points?” My pipeline returned Kwame Ellison-Reyes with 139 points. The model correctly planned the required filters, and Python retrieved the qualifying games, grouped the player rows, summed each player’s points, and selected the highest total.
+
+Q7, which asks for the largest deficit the Outlaws overcame in a win, was different. My final output abstained because: “no valid plan after 2 attempts (last problem: the plan ranks by ‘margin’ but the answer does not report it; rank by the quantity the question asks about).” The key difference is that final margin is structured in the games data, while the largest in-game deficit must be found in the recap text. With another day, I would extend the planner to support multi-stage retrieval which would retrieve all Outlaws wins and their recaps, extract each comeback deficit, then compare those values in Python.
+
+
+2. Pick one data source to add to this pipeline. Name one question a coach or executive could ask that becomes answerable only with that source. Describe how you would represent, retrieve, and validate it, and where the current embed.py / rag.py design would break.
+
+I would add player positional tracking data. One question this could answer is: “Which defenders stay closest to their assignment when defending off-ball movement?” 
+
+I would not represent every 60-FPS skeletal frame as text and embed it directly. Instead, I would preprocess the tracking data into possession-level features such as player-to-player distance, velocity, acceleration, defensive separation, and movement trajectories. I would store those features with game, possession, player, and timestamp identifiers so relevant possessions could be retrieved.
+
+For validation, I would trace computed metrics back to the tracking frames and compare sampled calculations against the raw coordinates. The current embed.py / rag.py design would break because it is built around small structured records and text documents, while tracking data is high-frequency data that requires preprocessing and numerical analysis before retrieval.
+
+
+3. Given the opportunity to work with any group in Basketball Operations (coaching, performance, scouting, strategy, etc.), which would you be most excited to work with and why?
+
+I would be most excited to work with a group focused on scouting and player evaluation. I am especially interested in using data to understand aspects of a player’s impact that traditional statistics like points, rebounds, and assists do not fully capture.
+
+For example, I would want to work with more advanced offensive and defensive data that could help measure how a player affects possessions even when they do not directly record a box-score statistic. Offensively, I would be interested in areas such as shot creation, spacing, off-ball movement, and the quality of opportunities a player creates for teammates. Defensively, I would want to examine things such as defensive positioning, matchup difficulty, contest quality, and how opponents perform when a player is involved in the possession.
+
+What excites me about this area is combining basketball context with data to build a more complete picture of player impact. I think this could help identify valuable players or skills that traditional statistics may overlook.

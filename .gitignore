@@ -1,0 +1,5 @@
+
+# Maintainer-private evaluation fixtures (contain canonical answers) - never ship to candidates
+evaluation/
+
+part1/debug/
